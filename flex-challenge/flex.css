@@ -1,0 +1,35 @@
+section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 900px;
+}
+
+.colored-container {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-one {
+  background-color: lightblue;
+}
+
+.color-two {
+  background-color: orange;
+}
+
+.color-three {
+  background-color: hotpink;
+}
+
+.color-four {
+  background-color: crimson;
+}
+
+.color-five {
+  background-color: lightgreen;
+}
