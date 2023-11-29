@@ -1,0 +1,54 @@
+section {
+  border: 1px solid black;
+}
+
+section h1 ~ p {
+  color: red;
+  text-decoration: underline;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 0;
+  font-style: normal;
+}
+
+section h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: blue;
+}
+
+section + p {
+  color: coral;
+  font-weight: bold;
+}
+
+p {
+  color: brown;
+}
+
+li {
+  list-style-type: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 ~ p {
+  color: lightgray;
+  padding-left: 25px;
+}
+
+h1 + p {
+  font-style: italic;
+  color: black;
+}
+
+h2 ~ p {
+  text-decoration: underline;
+  color: black;
+}
+
+h3 ~ p {
+  color: blue;
+  text-decoration: none;
+}
+
+h3 + p {
+  color: black;
+}
