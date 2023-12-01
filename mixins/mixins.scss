@@ -1,0 +1,39 @@
+@use "./partials/mixins";
+$font-arial: Arial, Helvetica, sans-serif;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  width: 600px;
+  margin: 20px;
+}
+
+.button,
+.chip,
+.pill {
+  margin: 10px;
+}
+
+.button {
+  @include mixins.border(2px dotted red);
+  &__para {
+    @include mixins.font-family-align-weight($font-arial, center, bold);
+  }
+}
+
+.chip {
+  @include mixins.border(2px solid blue);
+  &__para {
+    @include mixins.font-family-align-weight($font-arial, center, bold);
+  }
+}
+
+.pill {
+  @include mixins.border(2px dashed blue);
+  &__para {
+    @include mixins.font-family-align-weight($font-arial, center, bold);
+  }
+}

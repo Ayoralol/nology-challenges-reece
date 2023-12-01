@@ -1,0 +1,9 @@
+@mixin font-family-align-weight($font-family, $align, $weight) {
+  font-family: $font-family;
+  text-align: $align;
+  font-weight: $weight;
+}
+
+@mixin border($border) {
+  border: $border;
+}
