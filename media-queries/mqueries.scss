@@ -1,0 +1,42 @@
+@use "./mixins/mixins";
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap {
+  width: 480px;
+  height: 240px;
+  box-shadow: 0 0 10px black;
+  margin-top: 50px;
+  display: flex;
+}
+
+@include mixins.computer {
+  .wrap {
+    @include mixins.flag-vertical;
+    &__color {
+      @include mixins.colors(#009a49, white, #ff7900);
+    }
+  }
+}
+
+@include mixins.tablet {
+  .wrap {
+    @include mixins.flag-vertical;
+    &__color {
+      @include mixins.colors(#2d2926, #ffcd00, #c8102e);
+    }
+  }
+}
+
+@include mixins.phone {
+  .wrap {
+    @include mixins.flag-horizontal;
+    &__color {
+      @include mixins.colors(#000000, #dd0000, #ffcc00);
+    }
+  }
+}
