@@ -1,0 +1,45 @@
+@mixin phone {
+  @media only screen and (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: 601px) and (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin computer {
+  @media only screen and (min-width: 901px) {
+    @content;
+  }
+}
+
+@mixin flag-horizontal {
+  flex-direction: column;
+  &__color {
+    width: 480px;
+    height: 80px;
+  }
+}
+
+@mixin flag-vertical {
+  flex-direction: row;
+  &__color {
+    width: 160px;
+    height: 240px;
+  }
+}
+
+@mixin colors($color-one, $color-two, $color-three) {
+  &--one {
+    background-color: $color-one;
+  }
+  &--two {
+    background-color: $color-two;
+  }
+  &--three {
+    background-color: $color-three;
+  }
+}
