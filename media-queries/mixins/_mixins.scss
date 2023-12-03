@@ -32,7 +32,7 @@
   }
 }
 
-@mixin colors($color-one, $color-two, $color-three) {
+@mixin flag-colors($color-one, $color-two, $color-three) {
   &--one {
     background-color: $color-one;
   }
