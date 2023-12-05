@@ -48,7 +48,6 @@ console.log(
   !(10 % 2), // true
   !!!!((10 % 7) % 3), // false
   10 % 3 === -1 % 2, // false
-  // Continue here tomorrow ---
   (892783 != "89278" + 3) == 0, // false ----- true - realise the answer
   true && false, // false
   false || true, // true
