@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dom Challenge</title>
+    <script defer src="./dom.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form class="form-wrap">
+        <div class="padd">
+          <label for="name" class="padd">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name-input"
+            class="padd"
+            required
+          />
+        </div>
+        <div>
+          <label for="age" class="padd">Age</label>
+          <input
+            type="number"
+            name="age"
+            id="age-input"
+            class="padd"
+            required
+          />
+        </div>
+        <input type="submit" class="submit" class="padd" />
+      </form>
+      <p class="output"></p>
+    </div>
+  </body>
+</html>
