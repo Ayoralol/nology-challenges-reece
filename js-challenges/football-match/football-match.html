@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Match</title>
+</head>
+<body>
+    <h1>Football Match - Best of 3</h1>
+    <br>
+    <br>
+    <p id="game-started">Game Started: No</p>
+    <button onclick="handleStartGame()">Game Start!</button>
+    <p id="team-one-score">Team One: 0</p>
+    <p id="team-two-score">Team Two: 0</p>
+    <button onclick="handleTeamOneScore()">Team One Score!</button>
+    <button onclick="handleTeamTwoScore()">Team Two Score!</button>
+    <button onclick="handleStopGame()">Stop the Game!</button>
+    <button onclick="handleRestartSeries()">Restart the Series!</button>
+    <div id="final-results"></div>
+    <script src="/football-match/football-match.js"></script>
+</body>
+</html>

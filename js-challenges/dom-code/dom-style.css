@@ -1,0 +1,9 @@
+
+* {
+    font-family: sans-serif;
+}
+
+.valid {
+    background-color: lightgreen;
+    border: 5px solid green;
+}
