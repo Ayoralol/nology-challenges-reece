@@ -78,13 +78,12 @@ export const findMostExpensiveItem = (shoppingBasketArr) => {
  * @returns {{name: string, price: number, hasFreeShipping: boolean, quantity: number, totalPrice: number}[]} A new array where each object has had a total price added to it
  */
 export const settotalPrice = (shoppingBasketArr) => {
-  let newArray = shoppingBasketArr.map((obj) => {
+  return shoppingBasketArr.map((obj) => {
     return {
       ...obj,
       totalPrice: obj.quantity * obj.price,
     };
   });
-  return newArray;
   // let newArray = shoppingBasketArr.map((item) => {
   //   return {...item};
   // });
@@ -180,31 +179,69 @@ export const setImportantKeys = (mealsArr) => {
  *  id: number,
  *  drink: string,
  *  category: string,
- *  alcoholic: string,
- *  instructions: string,
- *  ingredients: string[],
- * }[]} A Cleaned array of cocktail data
- */
-export const cleanCocktailResponseData = (cocktailData) => {
-  let inputArray = cocktailData.map((a) => {
-    return {...a};
-  });
-  let outputArray = [];
-  for (let i in inputArray) {
+ *  alcoholic: string,let outputArray = [];
+  for (let i in cocktailData) {
     let item = {
-      id: inputArray[i]["idDrink"],
-      drink: inputArray[i]["strDrink"],
-      category: inputArray[i]["strCategory"],
-      alcoholic: inputArray[i]["strAlcoholic"],
-      instructions: inputArray[i]["strInstructions"],
+      id: cocktailData[i]["idDrink"],
+      drink: cocktailData[i]["strDrink"],
+      category: cocktailData[i]["strCategory"],
+      alcoholic: cocktailData[i]["strAlcoholic"],
+      instructions: cocktailData[i]["strInstructions"],
       ingredients: [],
     };
-    for (let key in inputArray[i]) {
-      if (key.includes("Ingredient") && inputArray[i][key] !== null) {
-        item["ingredients"].push(inputArray[i][key]);
+    for (let key in cocktailData[i]) {
+      if (key.includes("Ingredient") && cocktailData[i][key] !== null) {
+        item["ingredients"].push(cocktailData[i][key]);
       }
     }
     outputArray.push(item);
   }
   return outputArray;
+ *  instructions: string,
+ *  ingredients: string[],
+ * }[]} A Cleaned array of cocktail data
+ */
+export const cleanCocktailResponseData = (cocktailData) => {
+  // let outputArray = [];
+  // for (let i in cocktailData) {
+  //   let item = {
+  //     id: cocktailData[i]["idDrink"],
+  //     drink: cocktailData[i]["strDrink"],
+  //     category: cocktailData[i]["strCategory"],
+  //     alcoholic: cocktailData[i]["strAlcoholic"],
+  //     instructions: cocktailData[i]["strInstructions"],
+  //     ingredients: [],
+  //   };
+  //   for (let key in cocktailData[i]) {
+  //     if (key.includes("Ingredient") && cocktailData[i][key] !== null) {
+  //       item["ingredients"].push(cocktailData[i][key]);
+  //     }
+  //   }
+  //   outputArray.push(item);
+  // }
+  // return outputArray;
+
+  return cocktailData.map(
+    ({
+      idDrink,
+      strDrink,
+      strCategory,
+      strAlcoholic,
+      strInstructions,
+      ...rest
+    }) => {
+      let ingredients = Object.keys(rest)
+        .filter((key) => key.includes("Ingredient") && rest[key])
+        .map((key) => rest[key]);
+
+      return {
+        id: idDrink,
+        drink: strDrink,
+        category: strCategory,
+        alcoholic: strAlcoholic,
+        instructions: strInstructions,
+        ingredients,
+      };
+    }
+  );
 };
