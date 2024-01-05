@@ -23,6 +23,7 @@ const getJokes = async (query) => {
       },
     }
   );
+
   console.log("The response data");
   console.log(response);
   const data = await response.json();
