@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "title": "Whale Beach, Australia",
+    "location": "Whale Beach",
+    "dates": "15 - 22 Jan",
+    "price": "$29,790 AUD"
+  },
+  {
+    "id": "2",
+    "title": "Palm Beach, Australia",
+    "location": "Palm Beach",
+    "dates": "15 - 20 Jan",
+    "price": "$19,000 AUD"
+  },
+  {
+    "id": "3",
+    "title": "Newcastle, Australia",
+    "location": "Newcastle Beach",
+    "dates": "28 Jan - 2 Feb",
+    "price": "$1,425 AUD"
+  }
+]

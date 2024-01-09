@@ -1,0 +1,42 @@
+.card_wrap {
+  border: 1px solid red;
+}
+
+.image_wrap {
+  border-radius: 10px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.image {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wrap_rating {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.text_wrap {
+}
+
+.text {
+}
+
+.cost_wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.cost {
+  font-weight: bold;
+}
+
+.cost_total {
+  margin-left: 5px;
+}
